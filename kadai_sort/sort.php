@@ -9,15 +9,15 @@
 <body>
    <p>
 <?php
- function sort_num($array, $order = 'asc') {
-    if ($order === 'asc') {
+ function sort_2way($array, $order = 'asc') {
+    if ($order === 'true') {
         echo "昇順にソートします。<br>";
         sort($array); // 昇順
-    } elseif ($order === 'desc') {
+    } elseif ($order === 'false') {
         echo "降順にソートします。<br>";
         rsort($array); // 降順
     } else {
-        echo "ソート順が不正です。'asc' または 'desc' を指定してください。<br>";
+        echo "ソート順が不正です。'true' または 'false' を指定してください。<br>";
         return;
     }
 
@@ -32,10 +32,10 @@
 $nums = [15, 4, 18, 23, 10];
 
 // 昇順で出力
-sort_num($nums, 'asc');
+sort_2way($nums, 'true');
 
 // 降順で出力
-sort_num($nums, 'desc');
+sort_2way($nums, 'false');
 ?>
 
    </p>
